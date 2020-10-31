@@ -7,6 +7,10 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+/**
+ * an example to use dependency injection to get password validator service
+ */
+
 func main() {
 	flag.Parse()
 
