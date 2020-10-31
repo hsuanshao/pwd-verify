@@ -38,6 +38,11 @@ func (im *passwordValidatorSer) Destroy() error {
 }
 
 func (im *passwordValidatorSer) Get() interface{} {
+	return im.Password
+}
+
+// GetPasswordValidator returns Password.Service
+func GetPasswordValidator() password.Service {
 	pvs, err := di.Get(&passwordValidatorSer{})
 	if err != nil {
 		logrus.WithField("err", err.Error()).Panic("get password validator service failure")
