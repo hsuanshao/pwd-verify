@@ -15,14 +15,14 @@ requireNumber: Do you require at least one number character in password?
 allowSequence: Do you allowed sequence characters in password?  
 requireSymbol: Do you require at least one special symbol in password?  
 
-And while password be varified by `Password.Validtor` it will return multiple values length, uppercase, lowercase, number, symbol, sequence bool, err error).  
+And while password be varified by `Password.Validtor` it will return multiple values length, uppercase, lowercase, number, symbol, sequence in bool type, err in error type).  
 
 If err return is not nil, which mean password does not meets the configuration.  
-Others parameters can helps to tell you which rule been violation.  
+Others parameters can help to tell you which rules been violation.  
 
 ## Want to apply password validator module in your project
 
-If you want applied this password validator in your project. You can use `go mod` to mangem and get `password validator` module into your project
+If you want applied this password validator in your project. You can use `go mod` to manage and get `password validator` module into your project
 
 `go get github.com/hsuanshao/pwd-verify/module/password`  
 
@@ -35,6 +35,8 @@ The you can import it in your project.
 ## Dependency Injection
 
 There are many dependency injection solition in Go. But I choose to do another example to implement dependency inejction solution by myself in this programming task.  Which is placed in /app/infra/di.  
+
+parameters configuration can be set by flags
   
 Other famous dependency injection solution:  
   
