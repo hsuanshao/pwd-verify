@@ -15,10 +15,10 @@ func main() {
 	flag.Parse()
 
 	pv := deps.GetPasswordValidator()
-	_, _, _, _, _, _, err := pv.Validator("a3dh9sa3s")
+	lengthV, upperV, lowerV, numberV, symbolV, sequenceV, err := pv.Validator("a12A9sa3s")
 
 	if err != nil {
-		logrus.WithField("err", err.Error())
+		logrus.WithFields(logrus.Fields{"length": lengthV, "up": upperV, "lower": lowerV, "number": numberV, "symbol": symbolV, "sequence": sequenceV, "err": err.Error()}).Error("Password Validation failure")
 	}
 
 }
